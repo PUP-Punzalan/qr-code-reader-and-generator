@@ -1,9 +1,7 @@
-from hashlib import new
 import cv2
 import numpy as np
 from pyzbar.pyzbar import decode
 from datetime import datetime
-from unicodedata import decimal
 
 # getting the camera
 capture = cv2.VideoCapture(0)
@@ -19,7 +17,7 @@ while True:
         # creating a shape around the qrcode or barcode
         points = np.array([code.polygon], np.int32)
         points = points.reshape((-1,1,2))
-        cv2.polylines(image,[points], True, (255,0,255), 5)
+        cv2.polylines(image,[points], True, (57,255,20), 5)
 
         # getting the date and time
         dateTime = datetime.now()
@@ -28,7 +26,11 @@ while True:
         # generating a new text file
         newTextFile = open('assignment10.txt', 'w')
         newTextFile.write(f'{theData}\n\n{formatDateAndTime}')
-        print(f'Preview: {theData}\n\n{formatDateAndTime}') # Preview
+        print(f'Preview: {theData}\n\n\n{formatDateAndTime}') # Preview
 
     cv2.imshow('Result', image)
-    cv2.waitKey(1)
+    if cv2.waitKey(1) == ord('q'):
+        break
+
+capture.release()
+cv2.destroyAllWindows()

@@ -1,9 +1,9 @@
-Name: Robert C. Schofield
-Address: 365 Courtright Street, Karlsruhe, ND 58744
-Birthday: October 2, 1988
-Phone: 701-525-6458
-Email: RobertCSchofield@armyspy.com
+Name: Robert C. Schofield
+Address: 365 Courtright Street, Karlsruhe, ND 58744
+Birthday: October 2, 1988
+Phone: 701-525-6458
+Email: RobertCSchofield@armyspy.com
 Website: justhv.com
 
-Date: February 13, 2022 
-Time: 16:50:27
+Date: February 14, 2022 
+Time: 17:33:48
